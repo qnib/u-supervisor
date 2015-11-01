@@ -8,5 +8,6 @@ RUN echo "2015-10-14.1";apt-get update && \
      echo "tail -f /var/log/supervisor/" >> /root/.bash_history 
 ADD etc/supervisord.conf /etc/supervisord.conf
 
-CMD ["supervisord", "-n", "-c", "/etc/supervisord.conf"]
+RUN echo "/usr/bin/supervisord -c /etc/supervisord.conf" >> /root/.bash_history
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
 
