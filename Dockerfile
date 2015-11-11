@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:14.04
 MAINTAINER "Christian Kniep <christian@qnib.org>"
 
 RUN echo "2015-10-14.1";apt-get update && \
