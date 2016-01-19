@@ -9,5 +9,5 @@ RUN echo "2015-10-14.1";apt-get update && \
 ADD etc/supervisord.conf /etc/supervisord.conf
 
 RUN echo "/usr/bin/supervisord -c /etc/supervisord.conf" >> /root/.bash_history
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
-
+ADD opt/qnib/supervisor/bin/start.sh /opt/qnib/supervisor/bin/
+CMD ["/opt/qnib/bin/start_supervisor.sh", "-n"]
