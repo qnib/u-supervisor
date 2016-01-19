@@ -43,11 +43,11 @@ if [ "X${SUPERVISOR_START_EXTERNAL}" != "X" ];then
     fi
 fi
 
-if [ "X$1" == "X" ];then
+if [ "X$1" = "X" ];then
     supervisord -c /etc/supervisord.conf
-   sleep 5
-   echo "# supervisorctl status"
-   supervisorctl status
+    sleep 5
+    echo "# supervisorctl status"
+    supervisorctl status
 else
-   supervisord -n -c /etc/supervisord.conf
+    supervisord -n -c /etc/supervisord.conf
 fi

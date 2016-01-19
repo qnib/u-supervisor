@@ -10,4 +10,4 @@ ADD etc/supervisord.conf /etc/supervisord.conf
 
 RUN echo "/usr/bin/supervisord -c /etc/supervisord.conf" >> /root/.bash_history
 ADD opt/qnib/supervisor/bin/start.sh /opt/qnib/supervisor/bin/
-CMD ["/opt/qnib/bin/start_supervisor.sh", "-n"]
+CMD ["/opt/qnib/supervisor/bin/start.sh", "-n"]
